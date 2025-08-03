@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "reviewText": "The level of innovation and technical expertise demonstrated by this team is outstanding. They've transformed our digital presence completely.",
+    "authorName": "Kristin Watson",
+    "authorRole": "CEO, Tech Innovators",
+    "authorImage": "/images/avatar/review-13.png",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "reviewText": "Working with this team has been a game-changer for our business. Their attention to detail and creative solutions exceeded our expectations.",
+    "authorName": "Marcus Rodriguez",
+    "authorRole": "Founder, Innovation Labs",
+    "authorImage": "/images/avatar/review-13.png",
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "reviewText": "The collaboration with this team has been exceptional. Their insights and strategies have significantly improved our project outcomes.",
+    "authorName": "Emily Johnson",
+    "authorRole": "Project Manager, Creative Agency",
+    "authorImage": "/images/avatar/review-14.png",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "reviewText": "Their commitment to excellence and innovative approach has made a significant impact on our success.",
+    "authorName": "John Doe",
+    "authorRole": "Marketing Director, Global Corp",
+    "authorImage": "/images/avatar/review-15.png",
+    "rating": 3
+  },
+  {
+    "id": 5,
+    "reviewText": "The support and guidance provided by this team have been invaluable. They truly care about their clients and their success.",
+    "authorName": "Jane Smith",
+    "authorRole": "Operations Manager, Future Tech",
+    "authorImage": "/images/avatar/review-16.png",
+    "rating": 2
+  },
+  {
+    "id": 6,
+    "reviewText": "Their innovative solutions and proactive approach have helped us achieve our goals faster than we anticipated.",
+    "authorName": "Michael Brown",
+    "authorRole": "Product Owner, NextGen Solutions",
+    "authorImage": "/images/avatar/review-17.png",
+    "rating": 4
+  },
+   {
+    "id": 7,
+    "reviewText": "Their innovative solutions and proactive approach have helped us achieve our goals faster than we anticipated.",
+    "authorName": "Ritesh Thakur",
+    "authorRole": "Product Owner, NextGen Solutions",
+    "authorImage": "/images/avatar/review-17.png",
+    "rating": 4
+  }
+]
