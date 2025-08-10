@@ -33,7 +33,7 @@ const ProjectDetails = async ({ params }: { params: Promise<{ slug: string }> })
         <CtaImageSlider
           slides={[
             { id: '1', img: '/images/agent/06.png' },
-            { id: '2', img: '/images/agent/07.png' },
+            { id: '2', img: '/images/agent/22.jpg' },
             { id: '3', img: '/images/agent/08.png' },
           ]}
         />

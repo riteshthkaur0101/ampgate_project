@@ -44,12 +44,12 @@ const WhyChooseUs = () => {
                 Need NDAs, BAAs, or SoWs? We’ve got the paperwork enterprises expect.
               </p>
             </RevealWrapper>
-            <RevealWrapper className="py-3.5 pr-[30px] lg:py-[30px]">
+            {/* <RevealWrapper className="py-3.5 pr-[30px] lg:py-[30px]">
               <h5>ROI-Focused</h5>
               <p className="mt-3 text-base leading-[1.6] tracking-[0.32px]">
                 We deliver measurable impact—more leads, less overhead, smarter ops.
               </p>
-            </RevealWrapper>
+            </RevealWrapper> */}
           </div>
           <RevealWrapper as="figure" className="md:w-1/2">
             <img src="/images/home-5/why-rivor.png" alt="AI Solutions" className="h-full w-full" />

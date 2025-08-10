@@ -15,51 +15,51 @@ interface MenuItemProps {
 const menuItems: MenuItemProps[] = [
   {
     title: 'Home',
-    url: '#',
-    items: [
-      { title: 'Homepage 01 - Design Agency', url: '/home-01' },
-      { title: 'Homepage 02- Digital Solutions Agency', url: '/home-02' },
-      { title: 'Homepage 03 -  Portfolio', url: '/home-03' },
-      { title: 'Homepage 04 -  Photography Studio', url: '/home-04' },
-      { title: 'Homepage 05 -  SEO Agency', url: '/home-05' },
-      { title: 'Homepage 06 -  Creative Agency', url: '/home-06' },
-      { title: 'Homepage 07 -  Design Studio', url: '/home-07' },
-      { title: 'Homepage 08 -  Business Solutions', url: '/home-08' },
-      { title: 'Homepage 09 -  Personal Branding', url: '/home-09' },
-      { title: 'Homepage 10 -  Full Service Agency', url: '/home-10' },
-      { title: 'Homepage 11 -  Video Production', url: '/home-11' },
-      { title: 'Homepage 12 -  AI Agency', url: '/home-12' },
-      { title: 'Homepage 13 -  Travel Agency', url: '/home-13' },
-      { title: 'Homepage 14 -  Film Production Agency', url: '/home-14' },
-      { title: 'Homepage 15 -  Branding Agency', url: '/home-15' },
-      { title: 'Homepage 16 -  Marketing Agency', url: '/home-16' },
-      { title: 'Homepage 17 -  App Development Agency', url: '/home-17' },
-      { title: 'Homepage 18 -  Copywriting Agency', url: '/home-18' },
-      { title: 'Homepage 19 -  Brand Strategy', url: '/home-19' },
-      { title: 'Homepage 20 -  Social Media Agency', url: '/home-20' },
-      { title: 'Homepage 21 -  Law Firm Agency', url: '/home-21' },
-      { title: 'Homepage 22 -  Event Planning Agency', url: '/home-22' },
-      { title: 'Homepage 23 -  Insurance Agency', url: '/home-23' },
-      { title: 'Homepage 24 -  Management Agency', url: '/home-24' },
-      { title: 'Homepage 25 -  Communications Agency', url: '/home-25' },
-    ],
+    url: '/',
+    // items: [
+    //   { title: 'Homepage 01 - Design Agency', url: '/home-01' },
+    //   { title: 'Homepage 02- Digital Solutions Agency', url: '/home-02' },
+    //   { title: 'Homepage 03 -  Portfolio', url: '/home-03' },
+    //   { title: 'Homepage 04 -  Photography Studio', url: '/home-04' },
+    //   { title: 'Homepage 05 -  SEO Agency', url: '/home-05' },
+    //   { title: 'Homepage 06 -  Creative Agency', url: '/home-06' },
+    //   { title: 'Homepage 07 -  Design Studio', url: '/home-07' },
+    //   { title: 'Homepage 08 -  Business Solutions', url: '/home-08' },
+    //   { title: 'Homepage 09 -  Personal Branding', url: '/home-09' },
+    //   { title: 'Homepage 10 -  Full Service Agency', url: '/home-10' },
+    //   { title: 'Homepage 11 -  Video Production', url: '/home-11' },
+    //   { title: 'Homepage 12 -  AI Agency', url: '/home-12' },
+    //   { title: 'Homepage 13 -  Travel Agency', url: '/home-13' },
+    //   { title: 'Homepage 14 -  Film Production Agency', url: '/home-14' },
+    //   { title: 'Homepage 15 -  Branding Agency', url: '/home-15' },
+    //   { title: 'Homepage 16 -  Marketing Agency', url: '/home-16' },
+    //   { title: 'Homepage 17 -  App Development Agency', url: '/home-17' },
+    //   { title: 'Homepage 18 -  Copywriting Agency', url: '/home-18' },
+    //   { title: 'Homepage 19 -  Brand Strategy', url: '/home-19' },
+    //   { title: 'Homepage 20 -  Social Media Agency', url: '/home-20' },
+    //   { title: 'Homepage 21 -  Law Firm Agency', url: '/home-21' },
+    //   { title: 'Homepage 22 -  Event Planning Agency', url: '/home-22' },
+    //   { title: 'Homepage 23 -  Insurance Agency', url: '/home-23' },
+    //   { title: 'Homepage 24 -  Management Agency', url: '/home-24' },
+    //   { title: 'Homepage 25 -  Communications Agency', url: '/home-25' },
+    // ],
   },
-  {
-    title: 'About',
-    url: '#',
-    items: [
-      { title: 'About', url: '/about' },
-      { title: 'About 02', url: '/about-02' },
-    ],
-  },
-  {
-    title: 'Services',
-    url: '#',
-    items: [
-      { title: 'Services', url: '/services' },
-      { title: 'Services Details', url: '/services/media' },
-    ],
-  },
+  // {
+  //   title: 'About',
+  //   url: '#',
+  //   items: [
+  //     { title: 'About', url: '/about' },
+  //     { title: 'About 02', url: '/about-02' },
+  //   ],
+  // },
+  // {
+  //   title: 'Services',
+  //   url: '#',
+  //   items: [
+  //     { title: 'Services', url: '/services' },
+  //     { title: 'Services Details', url: '/services/media' },
+  //   ],
+  // },
   {
     title: 'Blog',
     url: '#',
@@ -121,7 +121,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
       }
     }
 
-    if (pathname === '/') {
+    if (pathname === '/' || pathname === '/home-12') {
       setActiveItems(['Home'])
     }
 
@@ -129,15 +129,16 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
   }, [pathname])
 
   useEffect(() => {
-    if (initialLoad && pathname === '/') {
+    if (initialLoad && (pathname === '/' || pathname === '/home-12')) {
       setActiveItems(['Home'])
 
-      setTimeout(() => {
-        const homeDropdown = dropdownRefsMap.current.get('Home')
-        if (homeDropdown) {
-          gsap.set(homeDropdown, { display: 'block', autoAlpha: 1, x: 0 })
-        }
-      }, 100)
+      // No need for dropdown animation since Home no longer has items
+      // setTimeout(() => {
+      //   const homeDropdown = dropdownRefsMap.current.get('Home')
+      //   if (homeDropdown) {
+      //     gsap.set(homeDropdown, { display: 'block', autoAlpha: 1, x: 0 })
+      //   }
+      // }, 100)
     }
   }, [initialLoad, pathname])
 
@@ -207,6 +208,12 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
           <a
             href={item.url}
             onClick={(e) => {
+              // If this is a direct link (not '#'), allow normal navigation
+              if (item.url !== '#') {
+                onItemClick && onItemClick()
+                return
+              }
+              // Otherwise, handle dropdown
               e.preventDefault()
               handleDropdownClick(item.title)
             }}
@@ -216,7 +223,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
           {item.items && (
             <ul
               ref={(el) => setDropdownRef(el, item.title)}
-              className={`menu-list-item-dropdown relative left-0 h-fit max-h-[60vh] w-full gap-x-4 overflow-y-auto md:absolute md:left-[48%] md:max-h-none md:w-[350px] md:overflow-visible md:pb-0 lg:left-[33%] lg:w-[650px] xl:left-[44%] ${item.title === 'Home' ? '!grid !grid-cols-1 lg:-mt-[70px] lg:!grid-cols-2' : '!grid !grid-cols-1 lg:top-5'} ${activeItems.includes(item.title) || (item.title === 'Home' && pathname === '/' && initialLoad) ? 'block' : 'hidden'} `}>
+              className={`menu-list-item-dropdown relative left-0 h-fit max-h-[60vh] w-full gap-x-4 overflow-y-auto md:absolute md:left-[48%] md:max-h-none md:w-[350px] md:overflow-visible md:pb-0 lg:left-[33%] lg:w-[650px] xl:left-[44%] ${item.title === 'Home' ? '!grid !grid-cols-1 lg:-mt-[70px] lg:!grid-cols-2' : '!grid !grid-cols-1 lg:top-5'} ${activeItems.includes(item.title) || (item.title === 'Home' && (pathname === '/' || pathname === '/home-12') && initialLoad) ? 'block' : 'hidden'} `}>
               {item.items.map((subItem) => (
                 <li key={subItem.title}>
                   <Link
